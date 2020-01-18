@@ -1,0 +1,154 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>教育コンテンツ作成のキックオフ</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="its-education"
+                  title="教育コンテンツ作成のキックオフ"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="教育コンテンツを作成する目的" duration="29">
+        <p>現在下記の教育コンテンツを抱えている。</p>
+<ul>
+<li>新入社員教育</li>
+<li>金融事業部向け教育</li>
+<li>インターンシップ</li>
+</ul>
+<p>これらの教育コンテンツは同様の内容を扱うことが多く、現状同じ教材を使用している。</p>
+<p>しかし、教育（レビューやQA）を行わず教材のみを渡すケースも増えており、独学で進められるような教育コンテンツにしていく必要が出てきた。</p>
+<p>そのため、各教育コンテンツの教材の一部を Google Codelabs 形式の Github Pages を作成することにした。</p>
+<p>対象の教材は下記の通り。</p>
+<ul>
+<li>Google Apps Script</li>
+<li>Unix コマンド</li>
+<li>Git</li>
+</ul>
+<pre><code>// 1セルのみのテーブルを挿入し、中身をCourier Newフォントにしておくとシンタックスハイライトをしたコードになる。
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getActiveSheet();
+
+for (var index = 1; index &lt; 5; index++) {
+  Logger.log(index + &#39;回目&#39;);
+}</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Google Apps Script" duration="5">
+        <p>Google Apps Script の教育は金融事業部向けの教育とインターンシップで行う。</p>
+<p>それぞれ最終的には Google Apps Script でWebアプリを作れるようになることがゴールとなる。</p>
+<ol type="1" start="1">
+<li>GASの基礎</li>
+<li>JavaScript の基礎（構文）</li>
+<li>Spreadsheet</li>
+<li>Drive</li>
+<li>Webアプリ</li>
+</ol>
+<p>例）</p>
+<pre><code>var flg = true;
+
+if (flg) {
+  console.log(&#39;OK!&#39;);
+} else {
+  console.log(&#39;NG!&#39;);
+}</code></pre>
+<p>コマンドラインの実行結果をを示したいときは<code>Consolas</code>フォントで書くと変換される。</p>
+<p>ソースコードの場合は<code>Courier New</code>フォントで書くと変換される。これらは文中でも適用される。</p>
+<pre>$ pwd
+/Users/budougumi0617/go/src/github.com/budougumi0617/claat-sample
+$ ls
+codelab.json img          index.html</pre>
+<aside class="special"><p>ポジティブな情報は1セルのみのテーブルを作り、背景色を明るい緑3ににして書いておく</p>
+</aside>
+<aside class="warning"><p>ネガティブな情報は1セルのみのテーブルを作り、背景色を明るいオレンジ3にして書いておく</p>
+</aside>
+<h3 is-upgraded><a href="https://github.com/budougumi0617/lsas/blob/3f863d5ef9298a620bd65fb8e2698bd2d19c1b21/lsas.go#L20-L31" target="_blank">見出し3で書いておくとタイトルになる(リンク先のfavconも出る)</a></h3>
+<pre><code>// LoadConfig loads AWS setting with option.
+func LoadConfig(region string) (aws.Config, error) {
+        // FIXME Need to set flexible amount of option
+        cfg, err := external.LoadDefaultAWSConfig()
+        if err != nil {
+                return aws.Config{}, err
+        }
+        if len(region) != 0 {
+                cfg.Region = region
+        }
+        return cfg, nil
+}</code></pre>
+<p>表1: 表も普通に書ける</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p>列タイトル1</p>
+</td><td colspan="1" rowspan="1"><p>列タイトル2</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>内容</p>
+</td><td colspan="1" rowspan="1"><p>内容</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>なにか</p>
+</td><td colspan="1" rowspan="1"><p>なにか</p>
+</td></tr>
+</table>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Unix コマンド" duration="1">
+        <p>Git の操作で使用するために学習する必要があるコンテンツである。</p>
+<p>主にファイル・フォルダ操作のコマンドをおさえる。</p>
+<p>Windows  と Mac  のどちらでも進められる内容にする。</p>
+<pre>$ cd Document
+$ touch sample.txt
+$ rm sample.txt</pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Git" duration="1">
+        <p>プロジェクトにアサインされるために必要となる Git の知識を身に着ける。</p>
+<p>あまり深追いはせずに、Git の概念（ソース管理の意義）や基本的な Git コマンドをおさえる。</p>
+<pre>$ git add -A
+$ git commit -m &#34;first commit&#34;
+$ git push origin master</pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="まず手始めに" duration="0">
+        <p>まず手始めに下記の内容から取り組んでいく。</p>
+<ol type="1" start="1">
+<li>教材の内容を一覧でまとめる</li>
+<li> MarkDownで教材の下書きを作成する</li>
+<li>作成した下書きを GitHub Pages に置き換える</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>
